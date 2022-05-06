@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2743589743589744" />
+        <entry key="app/src/main/res/layout/activity_about.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_edit_image_attachment.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/activity_place.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/activity_place_list.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_task.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/activity_view_image_attachment.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/dialog_edit_attachment_link.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/dialog_edit_attachment_text.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/dialog_edit_list_item_attachment_text.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/dialog_edit_place.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/dialog_image_source_select.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/dialog_record_audio.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_detail_reminder_location_based.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_detail_reminder_one_time.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_edit_repeating_reminder.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_home_list.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_reminder.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_task.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_attachment_image.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_attachment_list.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_attachment_list_item.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_attachment_text.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_place.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_task_programmed_location_based.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_task_programmed_one_time.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_task_programmed_repeating.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/list_item_task_unprogrammed.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/spinner_dropdown_item.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/menu/menu_home_contextual.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/menu/menu_home_no_sort.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/menu/menu_home_sort.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/menu/menu_place.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/menu/menu_task.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/menu/menu_task_detail.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="app/src/main/res/xml/remindy_settings.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

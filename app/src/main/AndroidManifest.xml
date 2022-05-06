@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ve.com.PROJECT.msd">
+
+    <!--FOR USING THE CAMERA-->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- PERMISSIONS -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+
+    <application
+
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme">
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <!--Embed the version of Google Play services that this app was compiled with.-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--Maps API key. See app's build.gradle to check how Gradle copies the API key from gradle.properties file to @string/google_maps_key.-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD68JlexiX5CvFJ4xzw9WC92gRzJha05dk" />
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.TaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.EditImageAttachmentActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.ViewImageAttachmentActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.PlaceListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.PlaceActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.TaskDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="ve.com.PROJECT.msd.app.activities.HomeActivity">
+            <!--Preserving navigation-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ve.com.PROJECT.msd.app.activities.HomeActivity"/>
+        </activity>
+
+        <activity
+            android:name="ve.com.PROJECT.msd.app.activities.SettingsActivity"
+            android:theme="@style/AppPreferenceTheme">
+        </activity>
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/> <!-- optional (needed if default theme has no action bar) -->
+
+
+
+        <!--FILE PROVIDER FOR CAMERA-->
+        <provider
+            android:authorities="ve.com.PROJECT.msd.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <!-- RECEIVERS -->
+        <receiver android:name="ve.com.PROJECT.msd.app.services.BootCompletedBroadcastReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="ve.com.PROJECT.msd.app.services.TriggerTaskNotificationReceiver"
+            />
+
+
+        <!-- SERVICES -->
+        <!--Notification Service-->
+        <service android:name="ve.com.PROJECT.msd.app.services.NotificationIntentService"
+            android:exported="true"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":ServiceProcess"/>
+
+        <!--TaskAction IntentService-->
+        <service android:name="ve.com.PROJECT.msd.app.services.TaskActionsIntentService" />
+
+        <!--Geofencing Service-->
+        <service android:name="ve.com.PROJECT.msd.app.services.GeofenceNotificationIntentService"/>
+
+        <!-- FetchAddress Service -->
+        <service
+            android:name="ve.com.PROJECT.msd.app.services.FetchAddressIntentService"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>
